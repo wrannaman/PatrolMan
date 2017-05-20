@@ -3,18 +3,16 @@ var PatrolMan = function( config ) {
 }
 
 PatrolMan.prototype.patrol = function(route, controller){
-  for (var key in controller)
+  for (const key in controller)
   {
     let _policies = [];
-
-    for ( var _key in this.config[route] )
+    for (const _key in this.config[route])
     {
-      if ( _key === '*' ) _policies = _policies.concat(this.config[route][_key])
-      if ( key.toLowerCase() === _key.toLowerCase() ) _policies = _policies.concat(this.config[route][_key])
+      if (_key === '*') _policies = _policies.concat(this.config[route][_key])
+      if (key.toLowerCase() === _key.toLowerCase()) _policies = this.config[route][_key];
     }
-    controller[key] = [ _policies ,  controller[key]]
+    controller[key] = [ _policies ,  controller[key] ];
   }
-
   return controller;
 }
 

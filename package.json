@@ -1,6 +1,6 @@
 {
   "name": "patrolman",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Controller level middleware for express",
   "main": "index.js",
   "scripts": {
@@ -11,5 +11,5 @@
     "url": "https://github.com/wrannaman/PatrolMan"
   },
   "author": "Andrew Pierno",
-  "license": "ISC"
+  "license": "MIT"
 }
